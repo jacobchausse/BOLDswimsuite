@@ -1,5 +1,5 @@
 #Importing relevant packages
-from BOLDswimsuite import BOLDgeometry, BOLDsequence, BOLDspins
+from boldswimsuite import BOLDgeometry, BOLDsequence, BOLDspins
 import matplotlib.pyplot as plt
 import numpy as np
 
@@ -7,16 +7,9 @@ def main():
 
     vessel_diameter = 0.002
     nsteps = 600
-
-    size = BOLDgeometry.size_from_k(
-        diameter=vessel_diameter, 
-        k=40,
-        ADC=0.001,
-        dt=0.2
-    )
     
     voxel = BOLDgeometry.ContinuousVoxel2D.from_random(
-        size=size,
+        num_vessels=50,
         CBV=0.02,
         B0=3,
         labels=['vesselGroup1'],

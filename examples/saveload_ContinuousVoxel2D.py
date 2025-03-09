@@ -1,5 +1,5 @@
 #Importing relevant packages
-from BOLDswimsuite import BOLDgeometry, BOLDsequence, BOLDspins
+from boldswimsuite import BOLDgeometry, BOLDsequence, BOLDspins
 import matplotlib.pyplot as plt
 import numpy as np
 import pickle
