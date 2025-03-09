@@ -1,0 +1,100 @@
+
+"""
+        positions : np.ndarray
+            Array of floats with shape (N, d), where N is the number of positions and d is the number of dimensions (e.g. 2 positions in a 3D space would require an array of shape (2, 3)).
+        
+        B0 : float
+            B0 magnetic field strength (Tesla).
+"""
+
+    def is_IV_dBz(self, positions: np.ndarray, B0: float) -> Tuple[np.ndarray, np.ndarray, float]:
+        """Given an array of positions and a magnetic field strength for B0, returns whether the positions are intravascular and the dBz magnetic field offset.
+
+        Parameters
+        ----------
+        positions : np.ndarray
+            Array of floats with shape (N, d), where N is the number of positions and d is the number of dimensions (e.g. 2 positions in a 3D space would require an array of shape (2, 3)).
+        B0 : float
+            B0 magnetic field strength (Tesla).
+
+        Returns
+        -------
+        Tuple[np.ndarray, np.ndarray, float]
+            3 element Tuple. The first element is a boolean array, indicating for each position if it is intravascular. The second element is an array with the extravascular dBz magnetic field offset of each position. The thrid element is the intravascular dBz magnetic offset (a single value as it is constant). 
+            
+            Note that the extravascular dBz is also provided for intravascular positions. In most cases this can be ignored, but is sometimes required during simulations. 
+        """      
+
+    def is_IV(self, positions: np.ndarray) -> np.ndarray:
+        """Given an array of positions, returns whether the positions are intravascular.
+
+        Parameters
+        ----------
+        positions : np.ndarray
+            Array of floats with shape (N, d), where N is the number of positions and d is the number of dimensions (e.g. 2 positions in a 3D space would require an array of shape (2, 3)).
+
+        Returns
+        -------
+        np.ndarray
+            Boolean array, indicating for each position if it is intravascular.
+        """  
+
+    def dBz_EV(self, positions, B0):
+        """Given an array of positions and a magnetic field strength for B0, returns the extravascular dBz magnetic field offset.
+
+        Parameters
+        ----------
+        positions : np.ndarray
+            Array of floats with shape (N, d), where N is the number of positions and d is the number of dimensions (e.g. 2 positions in a 3D space would require an array of shape (2, 3)).
+        B0 : float
+            B0 magnetic field strength (Tesla).
+
+        Returns
+        -------
+        np.ndarray
+            Array with the extravascular dBz magnetic field offset of each position.
+            
+            Note that the extravascular dBz is also provided for intravascular positions. In most cases this can be ignored, but is sometimes required during simulations. 
+        """   
+    
+    def dBz_IV(self, B0: float) -> float:
+        """Given a magnetic field strength for B0, returns whether the positions are intravascular and the dBz magnetic field offset.
+
+        Parameters
+        ----------
+        B0 : float
+            B0 magnetic field strength (Tesla).
+
+        Returns
+        -------
+        float
+            The intravascular dBz magnetic offset.
+        """
+
+    def intersects(self, other: InfiniteCylinder3DNumba) -> bool:
+        """Given another 3D infinite cylinder object, returns whether the two vessels intersect.
+
+        Parameters
+        ----------
+        other : InfiniteCylinder3DNumba
+            Another 3D infinite cylinder object.
+
+        Returns
+        -------
+        bool
+            Returns True if the vessels intersect and False otherwise.
+        """
+    
+    def volume_fraction(self, voxel_size: float) -> float:
+        """Given the side length of an isometric voxel, returns an estimate of the volume fraction that the vessel occupies in that space.
+
+        Parameters
+        ----------
+        voxel_size : float
+            Side length of the isometric voxel.
+
+        Returns
+        -------
+        float
+            Estimated volume fraction.
+        """        

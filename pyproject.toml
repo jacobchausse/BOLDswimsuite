@@ -1,0 +1,31 @@
+[tool.poetry]
+name = "BOLDswimsuite"
+version = "0.1.0"
+description = "Simulation of BOLD fMRI"
+authors = ["jacobchausse <jacob.chausse@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "~3.10"
+numpy = "^1.23.3"
+numba = "^0.56.2"
+scipy = "^1.9.1"
+tqdm = "^4.64.1"
+pathos = "^0.2.9"
+vtk = "9.2.6"
+mayavi = "^4.8.1"
+matplotlib = "^3.6.0"
+pyside2 = "^5.15.2.1"
+
+[tool.poetry.group.analysis]
+optional = true
+
+[tool.poetry.group.analysis.dependencies]
+SciencePlots = "^2.0.1"
+ipykernel = "^6.22.0"
+pandas = "^2.0.3"
+jupyter = "^1.0.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
