@@ -1,5 +1,9 @@
 # Installation Guide
 
+## Getting Access
+
+This public repository only contains the lessons, examples and documentation for the package, not the source code. To gain access to the code, please fill out the [Google Form](https://docs.google.com/forms/d/e/1FAIpQLSdgYc8M5KIoXqs_O89c0_Wwa25sbXWC_4JJk7L7tPJ4yH2oqw/viewform) with your institutional/workpace email that is linked to your github account so we can add you to the private repository.
+
 ## Requirements
 - Python 3.10.X
 
