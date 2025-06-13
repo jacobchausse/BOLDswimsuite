@@ -1,3 +1,5 @@
+<img width=400 alt="BOLDswimsuite logo" src="https://github.com/jacobchausse/BOLDswimsuite/blob/main/boldswimsuite_logo.png">
+
 # Installation Guide
 
 ## Getting Access
